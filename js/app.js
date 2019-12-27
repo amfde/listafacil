@@ -12,38 +12,37 @@ function loadListas(){
     var listas = [
         {
             nome: 'Lista de compras Carrefour',
-            itensCheck: [],
-            itensUncheck: []
+            itens: [],
+            itensCheck: []
         },
         {
             nome: 'Lista de compras Ferreira Costa',
-            itensCheck: ['Parafusos', 'Ferraments'],
-            itensUncheck: []
+            itens: ['Parafusos', 'Janela de Alumínio'],
+            itensCheck: ['Pregos']
         },
         {
             nome: 'Lista de Medicamentos',
-            itensCheck: [''],
-            itensUncheck: []
+            itens: [],
+            itensCheck: []
         },
         {
             nome: 'Lista de Materiais para construção',
-            itensCheck: [],
-            itensUncheck: []
+            itens: [],
+            itensCheck: []
         },
         {
             nome: 'Lista de Presentes',
-            itensCheck: [],
-            itensUncheck: []
+            itens: [],
+            itensCheck: []
         }
     ];
 
     for (const lista in listas) {
-        elLista.innerHTML += `<a href="#!" class="collection-item">${listas[lista].nome}<span class="new badge" data-badge-caption=" ${(listas[lista].itensCheck.length > 1)?'Itens restantes':'Item restante'}"><strong>${listas[lista].itensCheck.length}</strong></span></a>`;
+        elLista.innerHTML += `<a href="#!" class="collection-item">${listas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${listas[lista].itens.length}</strong></span></a>`;
     }
 }
 
 loadListas();
-
 
 elBtSalvar.addEventListener('click', function(e){
     e.preventDefault();
@@ -52,8 +51,3 @@ elBtSalvar.addEventListener('click', function(e){
     text = '';
     elInputLista.value = '';
 });
-
-
-elItem.addEventListener('click', function(){
-    console.log('teste')
-})
