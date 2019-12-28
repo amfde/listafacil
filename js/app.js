@@ -57,8 +57,7 @@ loadListas();
 
 elBtSalvar.addEventListener('click', function(e){
     e.preventDefault();
-    addLista(elInputLista.value);
-    // console.log(text);
-    //text = '';
+    var nome = elInputLista.value;
+    addLista(nome);
     elInputLista.value = '';
 });
