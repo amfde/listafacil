@@ -38,7 +38,7 @@ var listas = [
 function loadListas(){
     elLista.innerHTML = '';
     for (const lista in listas) {
-        elLista.innerHTML += `<a href="#!" class="collection-item">${listas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${listas[lista].itens.length}</strong></span></a>`;
+        elLista.innerHTML += `<a href="#!" class="collection-item">${listas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${listas[lista].itens.length}</strong></span></a>`;  
     }
 }
 
@@ -53,7 +53,9 @@ function addLista(nome){
     loadListas();
 }
 
-loadListas();
+function deleteLista(pos){
+
+}
 
 elBtSalvar.addEventListener('click', function(e){
     e.preventDefault();
@@ -61,3 +63,5 @@ elBtSalvar.addEventListener('click', function(e){
     addLista(nome);
     elInputLista.value = '';
 });
+
+loadListas();
