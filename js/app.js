@@ -8,19 +8,27 @@ var elInputLista = document.querySelector('#inputLista');
 
 //Listas temporarias
 var listas = []
+var storages = []
 
 function loadListas(){
-    listas = []
-    var dsListas = JSON.parse(localStorage.getItem('listas'));
-    elLista.innerHTML = '';
-
-    for (const iterator of dsListas) {
-        listas.push(iterator);
-    } 
+    listas = [];
     
-    for (const lista in dsListas) {
-        elLista.innerHTML += `<a href="#!" class="collection-item">${dsListas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${dsListas[lista].itens.length}</strong></span></a>`;  
+    for (let i = 0; i < localStorage.length; i++) {
+        storages.push(localStorage.key(i));
     }
+
+    if(storages.indexOf('listas') > -1){
+        var dsListas = JSON.parse(localStorage.getItem('listas'));
+        elLista.innerHTML = '';
+
+        for (const lista in dsListas) {
+            elLista.innerHTML += `<a href="#!" class="collection-item">${dsListas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${dsListas[lista].itens.length}</strong></span></a>`;  
+        }
+
+        for (const item of dsListas) {
+            listas.push(item);
+        } 
+    } 
 }
 
 function addLista(nome){
