@@ -28,6 +28,8 @@ function loadListas(){
         for (const item of dsListas) {
             listas.push(item);
         } 
+    }else{
+        console.log('A lista ainda foi criada no localStorage.');
     } 
 }
 
