@@ -1,4 +1,4 @@
-//Elementos DOM
+ //Elementos DOM
 //Lista elementos
 var elLista = document.querySelector('#lista');
 
@@ -23,6 +23,7 @@ function loadListas(){
 
         for (const lista in dsListas) {
             elLista.innerHTML += `<a href="#!" class="collection-item">${dsListas[lista].nome}<span class="new badge" data-badge-caption=""><strong>${dsListas[lista].itens.length}</strong></span></a>`;  
+            console.log(lista);
         }
 
         for (const item of dsListas) {
