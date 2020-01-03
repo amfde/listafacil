@@ -1,10 +1,10 @@
 /* main */
 .btn-position{
-    position: relative;
-    top: 25px;
-    left: 0px;
-    height: 100px;
-    width: 100px;
+    position: fixed;
+    right: 19px;
+    padding-top: 25px;
+    margin-bottom: 0;
+    z-index: 997;
 }
 .title-12{
     padding: 20px 10px 20px 20px !important;
