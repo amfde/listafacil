@@ -13,11 +13,11 @@
 }
 
 #secListas{
-    display: block;
+    display: none;
 }
 
 #secItensListas{
-    display: none;
+    display: block;
 }
 
 /* materialize*/
